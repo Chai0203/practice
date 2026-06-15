@@ -6,5 +6,6 @@ public class FirstTest {
     public void firstTest(){
         System.out.println("My first test");
         System.out.println("My second test");
+        System.out.println("My third test");
     }
 }
