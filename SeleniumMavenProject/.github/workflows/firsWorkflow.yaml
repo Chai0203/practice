@@ -1,0 +1,9 @@
+name: my first workflow
+on:
+  push
+jobs:
+  "runs-on":"ubuntu-latest"
+  "name":"my first job"
+  "step": "mvn clean install"
+
+
