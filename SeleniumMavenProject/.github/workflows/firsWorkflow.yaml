@@ -1,9 +1,22 @@
-name: my first workflow
+name: My First Workflow
+
 on:
-  push
+  push:
+
 jobs:
-  "runs-on":"ubuntu-latest"
-  "name":"my first job"
-  "step": "mvn clean install"
+  build:
+    name: My First Job
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build Project
+        run: mvn clean install
